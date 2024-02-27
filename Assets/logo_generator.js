@@ -17,8 +17,6 @@ function promptUser(question) {
 async function main() {
   try {
     const text = await promptUser("Enter up to three characters: ");
-    console.log("Text entered:", text); // Debugging statement
-
     if (text.length > 3) {
       console.log("Text must be up to three characters.");
       rl.close();
@@ -26,13 +24,21 @@ async function main() {
     }
 
     const textColor = await promptUser("Enter text color (keyword or hexadecimal): ");
-    console.log("Text color entered:", textColor); // Debugging statement
 
-    const shape = await promptUser("Choose a shape (circle, triangle, square): ");
-    console.log("Shape chosen:", shape); // Debugging statement
+    const shapeOptions = ['circle', 'triangle', 'square'];
+    console.log("Choose a shape: ");
+    for (let i = 0; i < shapeOptions.length; i++) {
+      console.log(`${i + 1}. ${shapeOptions[i]}`);
+    }
+    const shapeIndex = parseInt(await promptUser("Enter the number corresponding to the shape: "));
+    if (isNaN(shapeIndex) || shapeIndex < 1 || shapeIndex > shapeOptions.length) {
+      console.log("Invalid shape selection.");
+      rl.close();
+      return;
+    }
+    const shape = shapeOptions[shapeIndex - 1];
 
     const shapeColor = await promptUser("Enter shape color (keyword or hexadecimal): ");
-    console.log("Shape color entered:", shapeColor); // Debugging statement
 
     const svgContent = `
       <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
@@ -40,7 +46,6 @@ async function main() {
         <text x="150" y="125" font-size="60" text-anchor="middle" fill="${textColor}">${text}</text>
       </svg>
     `;
-    console.log("SVG content:", svgContent); // Debugging statement
 
     fs.writeFileSync('logo.svg', svgContent);
     console.log("Generated logo.svg");
