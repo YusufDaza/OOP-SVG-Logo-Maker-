@@ -40,12 +40,29 @@ async function main() {
 
     const shapeColor = await promptUser("Enter shape color (keyword or hexadecimal): ");
 
-    const svgContent = `
-      <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
-        <rect width="100%" height="100%" fill="${shapeColor}" />
-        <text x="150" y="125" font-size="60" text-anchor="middle" fill="${textColor}">${text}</text>
-      </svg>
-    `;
+    let svgContent = '';
+    if (shape === 'circle') {
+      svgContent = `
+        <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="150" cy="100" r="80" fill="${shapeColor}" />
+          <text x="150" y="125" font-size="60" text-anchor="middle" fill="${textColor}">${text}</text>
+        </svg>
+      `;
+    } else if (shape === 'triangle') {
+      svgContent = `
+        <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="150,20 250,180 50,180" fill="${shapeColor}" />
+          <text x="150" y="125" font-size="60" text-anchor="middle" fill="${textColor}">${text}</text>
+        </svg>
+      `;
+    } else {
+      svgContent = `
+        <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+          <rect width="100%" height="100%" fill="${shapeColor}" />
+          <text x="150" y="125" font-size="60" text-anchor="middle" fill="${textColor}">${text}</text>
+        </svg>
+      `;
+    }
 
     fs.writeFileSync('logo.svg', svgContent);
     console.log("Generated logo.svg");
