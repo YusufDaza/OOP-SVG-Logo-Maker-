@@ -52,7 +52,7 @@ async function main() {
       svgContent = `
         <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
           <polygon points="150,20 250,180 50,180" fill="${shapeColor}" />
-          <text x="150" y="125" font-size="60" text-anchor="middle" fill="${textColor}">${text}</text>
+          <text x="150" y="135" font-size="50" text-anchor="middle" fill="${textColor}">${text}</text>
         </svg>
       `;
     } else {
