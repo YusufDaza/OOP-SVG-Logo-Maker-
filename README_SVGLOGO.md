@@ -15,7 +15,7 @@
 
 ## Installation
 
-1. Clone the project repository from the source where it's hosted, such as GitHub. Use the following command in your terminal or command prompt to clone the repository: git clone <repository_url>
+1. Clone the project repository from the source where it's hosted, such as GitHub. Use the following command in your terminal or command prompt to clone the repository: `git clone <repository_url>`
 2. Use the `cd` command to navigate into the directory of the cloned repository.
 3. Once you're inside the project directory, install the dependencies required for the application to run. Run the command: `npm install`.
 
@@ -25,23 +25,33 @@
 2. After providing all the required input, the application will generate an SVG file named `logo.svg` in the project directory.
 3. You can open the generated `logo.svg` file in a web browser to verify that the logo meets the specified criteria, including the dimensions and appearance based on the input provided during the execution of the application.
 
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
+-    ![alt text](/Images/Screenshot%2000.png)
 
-## Credits
+-    ![alt text](/Images/Screenshot%2001.png)
 
-List your collaborators, if any, with links to their GitHub profiles.
+-    ![alt text](/Images/Screenshot%2002.png)
 
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
-
-If you followed tutorials, include links to those here as well.
 
 ## License
 
-The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
+MIT License
 
----
+Copyright (c) 2024 Joseph Daza
 
-🏆 The previous sections are the bare minimum, and your project will ultimately determine the content of this document. You might also want to consider adding the following sections.
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
